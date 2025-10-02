@@ -1,7 +1,7 @@
 {
     "dockerfile_lines": [],
     "graphs": {
-      "email_assistant": "./src/MyAgent/agent.py:graph"
+      "router_agent": "./src/MyAgent/agent.py:agent"
     },
     "python_version": "3.12",
     "env": ".env",

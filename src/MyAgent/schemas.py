@@ -6,20 +6,14 @@ from langgraph.graph import MessagesState
 
 class RouterSchema(BaseModel):
     """Analyze and route it according to its content."""
-    pass
+    chain_of_thought: str = Field(description="Reasoning about which agent need to handle the user query")
+    router: Literal["company_info_agent", "delivery_agent", "order_agent", "transaction_agent"] = Field(description="transfor query to one of the sub-agents")
 
     
 
 
-class StateInput(TypedDict):
-    # This is the input to the state
-    pass
-
 class State(MessagesState):
     # This state class has the messages key build in
-    pass
+    router: Literal["company_info_agent", "delivery_agent", "order_agent", "transaction_agent"] 
+    
 
-class UserPreferences(BaseModel):
-    """Updated user preferences based on user's feedback."""
-    chain_of_thought: str = Field(description="Reasoning about which user preferences need to add/update if required")
-    user_preferences: str = Field(description="Updated user preferences")

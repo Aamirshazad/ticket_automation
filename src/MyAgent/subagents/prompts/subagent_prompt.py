@@ -1,0 +1,1 @@
+# write all subagent prompt here including there releated tools 

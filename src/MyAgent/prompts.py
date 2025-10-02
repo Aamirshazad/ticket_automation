@@ -1,1 +1,1 @@
-system_prompt = """You are a helpful assistant that can search for files."""
+ticket_routing = """You are a helpful assistant that can search for files."""
